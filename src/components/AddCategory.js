@@ -8,6 +8,7 @@ export const AddCategory = ({setCategories}) => {
 
     const handleInputChange = (e) => {
         setinputValue(e.target.value);
+
     }
 
     const handleSubmit = (e) => {
@@ -23,6 +24,7 @@ export const AddCategory = ({setCategories}) => {
 
     return (
         <form onSubmit={handleSubmit}>
+            <p>{inputValue}</p>
             <input
                 type='text'
                 value={inputValue}
@@ -32,6 +34,6 @@ export const AddCategory = ({setCategories}) => {
     );
 };
 
-AddCategory.defaultProps = {
+AddCategory.propTypes = {
     setCategories: PropTypes.func.isRequired
 }
